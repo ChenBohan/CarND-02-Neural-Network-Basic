@@ -43,3 +43,21 @@ Trying for L=[5,6,7]
 expL: [ 148.4131591   403.42879349 1096.63315843]
 result: [0.09003057317038046, 0.24472847105479764, 0.6652409557748219]
 ```
+
+## Cross-Entropy
+
+```python
+import numpy as np
+
+# Input two lists Y, P,
+# and returns the float corresponding to their cross-entropy.
+def cross_entropy(Y, P):
+    Y = np.float_(Y)
+    P = np.float_(P)
+    return -np.sum(Y * np.log(P) + (1 - Y) * np.log(1 - P))
+```
+example
+```
+Trying for Y=[1,0,1,1] and P=[0.4,0.6,0.1,0.5].
+The result is 4.8283137373
+```
