@@ -77,3 +77,13 @@ error = y - nn_output
 # Calculate change in weights
 del_w = learnrate * error * nn_output * (1 - nn_output) * x
 ```
+
+## Multilayer Perceptrons
+
+```python
+hidden_layer_in = np.dot(X, weights_input_to_hidden)
+hidden_layer_out = sigmoid(hidden_layer_in)
+
+output_layer_in = np.dot(hidden_layer_out, weights_hidden_to_output)
+output_layer_out = sigmoid(output_layer_in)
+```
