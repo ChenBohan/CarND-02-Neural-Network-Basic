@@ -1,6 +1,14 @@
 # CarND-02-Neural-Network-Basic
 Udacity Self-Driving Car Engineer Nanodegree: Introduction to Neural Network
 
+
+## Further Reading
+
+- Yes, you should understand backprop: https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b#.vt3ax2kg9
+- A lecture from Stanford's CS231n course: https://www.youtube.com/watch?v=59Hbtz7XgjM
+- Introduction to vectors: https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors/v/vector-introduction-linear-algebra
+- Introduction to matricesl: https://www.khanacademy.org/math/precalculus/precalc-matrices
+
 ## Perceptron 
 
 y = setp(w1x1 + w2x2)
@@ -87,10 +95,3 @@ hidden_layer_out = sigmoid(hidden_layer_in)
 output_layer_in = np.dot(hidden_layer_out, weights_hidden_to_output)
 output_layer_out = sigmoid(output_layer_in)
 ```
-
-## Further Reading
-
-- Yes, you should understand backprop: https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b#.vt3ax2kg9
-- A lecture from Stanford's CS231n course: https://www.youtube.com/watch?v=59Hbtz7XgjM
-- Introduction to vectors: https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors/v/vector-introduction-linear-algebra
-- Introduction to matricesl: https://www.khanacademy.org/math/precalculus/precalc-matrices
