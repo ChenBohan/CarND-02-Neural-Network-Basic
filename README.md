@@ -1,6 +1,14 @@
 # CarND-02-Neural-Network-Basic
 Udacity Self-Driving Car Engineer Nanodegree: Introduction to Neural Network
 
+
+## Further Reading
+
+- [Yes, you should understand backprop](https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b#.vt3ax2kg9)
+- [A lecture from Stanford's CS231n course](https://www.youtube.com/watch?v=59Hbtz7XgjM)
+- [Introduction to vectors](https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors/v/vector-introduction-linear-algebra)
+- [Introduction to matricesl](https://www.khanacademy.org/math/precalculus/precalc-matrices)
+
 ## Perceptron 
 
 y = setp(w1x1 + w2x2)
@@ -61,20 +69,11 @@ The result is 4.8283137373
 ## Gradient Descent
 
 ```python
-import numpy as np
-
 def sigmoid(x):
     """
     Calculate sigmoid
     """
     return 1/(1+np.exp(-x))
-
-learnrate = 0.5
-x = np.array([1, 2])
-y = np.array(0.5)
-
-# Initial weights
-w = np.array([0.5, -0.5])
 
 # Calculate one gradient descent step for each weight
 # Calculate output of neural network
@@ -85,4 +84,14 @@ error = y - nn_output
 
 # Calculate change in weights
 del_w = learnrate * error * nn_output * (1 - nn_output) * x
+```
+
+## Multilayer Perceptrons
+
+```python
+hidden_layer_in = np.dot(X, weights_input_to_hidden)
+hidden_layer_out = sigmoid(hidden_layer_in)
+
+output_layer_in = np.dot(hidden_layer_out, weights_hidden_to_output)
+output_layer_out = sigmoid(output_layer_in)
 ```
